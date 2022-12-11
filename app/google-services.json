@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128023400568",
+    "project_id": "chataplication-2dd7c",
+    "storage_bucket": "chataplication-2dd7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128023400568:android:87cd1d5faffdd45d515d8d",
+        "android_client_info": {
+          "package_name": "com.example.chataplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128023400568-k5j7pisis1ghk5rsqbgrjr424g1t29md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcNxFnjpagrMdNEXXhdS6JiiD76mPBr8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128023400568-k5j7pisis1ghk5rsqbgrjr424g1t29md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
