@@ -18,6 +18,7 @@ class Register : AppCompatActivity() {
     private lateinit var btnSignUp: Button
     private lateinit var mDbRef:DatabaseReference
     private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -48,14 +49,14 @@ class Register : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
 
-                    addUserToDatabase(name,email,mAuth.currentUser?.uid!!)
+                    addUserToDatabase(name,email,password,mAuth.currentUser?.uid!!)
                     val intent= Intent(this,MainActivity::class.java)
                     finish()
                     startActivity(intent)
 
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(this@Register,"Some Error occurred", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Register,"Password Must (A-Z)(a-z)(1-9) ! # .", Toast.LENGTH_SHORT).show()
 
 
                 }
@@ -63,11 +64,14 @@ class Register : AppCompatActivity() {
 
     }
 
-    private fun addUserToDatabase(name: String,email: String,uid: String){
+
+
+
+    private fun addUserToDatabase(name: String,email: String,uid: String,password: String){
 
         mDbRef = FirebaseDatabase.getInstance().getReference()
 
-        mDbRef.child("user").child(uid).setValue(User(name,email,uid))
+        mDbRef.child("user").child(uid).setValue(User(name,email,uid,password))
 
     }
 }
